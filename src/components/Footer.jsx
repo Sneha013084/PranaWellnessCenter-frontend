@@ -6,7 +6,7 @@ const Footer =()=>{
 
     return(
         <footer className="footer">
-            <p>&copy;{new Dtae().getFullYear()} Prana Wellness. All rights reserved.</p>
+            <p>&copy;{new Date().getFullYear()} Prana Wellness Center. All rights reserved.</p>
 
         </footer>
     );
