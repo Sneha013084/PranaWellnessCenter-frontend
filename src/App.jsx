@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// App.jsx - for layout ,routing
+import React from "react";
+// import { Routes, Route } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+// for creating a layout in every page// import header and footer so that they appear on every page
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+// my pages
+
+// import Home from "./pages/Home";
+// import Contact from "./pages/Contact";
+// import Login from "./pages/Login";
+// import Register from "./pages/Login";
+// import Profile from "./pages/Profile";
+
+//app- container = in a div, below- header, then main- naviagtion, then footer
+// Routes - Home , contact, register, login and profile
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    <div className="app-container">
+      <Header />
+      <h2 className="text-center text-2xl font-bold my-4">Hello</h2>
+{/* 
+       <main className="main-content"> 
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      
+    </main>  */}
+      <Footer /> 
+    </div>
+  );
+};
+export default App;
