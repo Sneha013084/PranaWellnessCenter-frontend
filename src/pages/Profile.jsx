@@ -42,7 +42,7 @@ const Profile = () => {
 
     //if loading - comes with these details
     return(
-        <div className="">
+        <div className="profile-container">
             <h2>Your Profile</h2>
 
             {status && !status.ok &&(
@@ -50,7 +50,7 @@ const Profile = () => {
 
             )}
 
-            <div className="profile-details">
+            <div className="profile-card">
                 <p><strong>Name:</strong>{user.name}</p>
                   <p><strong>Email:</strong>{user.email}</p>
                     <p><strong>Phone:</strong>{user.phone} || "N/A"</p>

@@ -7,7 +7,10 @@
   font-family: Arial, sans-serif;
 }
 
-/* Card that holds the profile details */
+
+/* Card profile details */
+
+
 .profile-card {
   margin-top: 1.5rem;
   padding: 1.5rem;
@@ -18,12 +21,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Paragraphs inside the profile card */
+/* Paragraphs inside the profile card
 .profile-card p {
   margin: 0.5rem 0;
   font-size: 1rem;
   line-height: 1.4;
-}
+} */
 
 /* Error message styling */
 .error-msg {
