@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard"
 import "./ServiceCard.css";
 
 import facialImg from "../assets/facialImg.jpg";
-import januImg from "../assets/januvastImg.jpg";
+import januImg from "../assets/JanuvastImg.jpg";
 import massageImg from "../assets/FullBodyMassageImg.jpg";
 import ElakizhiImg from "../assets/BolusMassageImg.jpg";
 import footImg from "../assets/FootMassageImg.jpg"
