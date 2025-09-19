@@ -1,0 +1,36 @@
+.footer {
+  background-color: #222; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center; /* Centered text */
+  padding: 20px 0; /* Vertical padding */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer text */
+.footer p {
+  margin: 0;
+}
+
+/* Optional: Link styles if you add links in future */
+.footer a {
+  color: #4a90e2; /* Accent color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #50e3c2;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 600px) {
+  .footer {
+    font-size: 13px;
+    padding: 15px 0;
+  }
+}

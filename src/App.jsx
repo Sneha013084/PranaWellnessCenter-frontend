@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Header />
-      <h2 className="text-center text-2xl font-bold my-4">Hello</h2>
+      <h2 className="text-center text-2xl font-bold my-4"></h2>
 
        <main className="main-content"> 
         <Routes>

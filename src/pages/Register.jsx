@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import axios from "axios";
 import "./Register.css";
 
 const Register= ()=>{
@@ -18,8 +19,14 @@ const Register= ()=>{
             [e.target.name]: e.target.value,
         });
     };
-    const handleSubmit =  (e) =>{
+
+    const handleSubmit =  async(e) =>{
         e.preventDefault();// connecting with backend
+
+
+        try{
+            const response = await axios .post("http://localhost:5000/api/register", form);
+    
 
         setStatus({ok:true, message: "Registration successful!"});
         setForm({
@@ -28,6 +35,15 @@ const Register= ()=>{
             password: "",
             phone: "",
         });
+    }catch(error){
+        console.error(error);
+        setStatus({
+        ok: false,
+        message: error.response?.data?.message || "Registration failed. Try again.",
+      });
+    }
+  };
+    
 
         return(
 
@@ -82,5 +98,5 @@ const Register= ()=>{
         );
     }
 
-};
+
 export default Register;
