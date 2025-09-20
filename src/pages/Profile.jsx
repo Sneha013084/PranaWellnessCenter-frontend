@@ -16,7 +16,7 @@ const Profile = () => {
 
         // await axios.get 
 
-        const response = await axios.get("http://localhost:5000/api/profile", {
+        const response = await axios.get("https://pranawellnesscenter-backend.onrender.com/api/users/profile", {
 
           headers: {
             Authorization: `Bearer ${token}`, // send token in Authorization header
@@ -53,8 +53,8 @@ const Profile = () => {
             <div className="profile-card">
                 <p><strong>Name:</strong>{user.name}</p>
                   <p><strong>Email:</strong>{user.email}</p>
-                    <p><strong>Phone:</strong>{user.phone} || "N/A"</p>
-                      <p><strong>Role:</strong>{user.role} || "User"</p>
+                    <p><strong>Phone:</strong>{user.phone || "N/A"} </p>
+                      <p><strong>Role:</strong>{user.role || "User"}</p>
 
             </div>
 

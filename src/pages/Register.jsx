@@ -25,7 +25,7 @@ const Register= ()=>{
 
 
         try{
-            const response = await axios .post("http://localhost:5000/api/register", form);
+            const response = await axios .post("https://pranawellnesscenter-backend.onrender.com/api/users/register", form);
     
 
         setStatus({ok:true, message: "Registration successful!"});

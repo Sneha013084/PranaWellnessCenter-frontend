@@ -9,11 +9,26 @@ const Login = () => {
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value});
   }
-  const handleSumit =(e)=>{
+  const handleSumit =async(e)=>{
     e.preventDefault();
+
+    // for connection to the backend
+    try{
+      const response = await axios.post("https://pranawellnesscenter-backend.onrender.com/api/users/login", form);
+
+      console.log("Login Response", response.data);
+
+      // token saved in local storage
+      localStorage.setItem("token", response.data.token);
+    
 
     setStatus({ok:true, message:"Login Successfull!"});
     setForm({email:"",password:""});
+
+    } catch(error){
+      console.error(error.response?.data || error.message);
+      setStatus({ ok:false, message : error.response?.data?.message || "Login failed"});
+    }
   };
 
   return(
