@@ -40,6 +40,7 @@ const BookingForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const data = await createBooking(formData, token);
       setMessage("Booking successful!");
@@ -116,16 +117,21 @@ const BookingForm = () => {
 
       <h3>My Bookings</h3>
       <ul>
-        {bookings.map((booking) => (
+        {bookings.map((booking) => {
+          const date = new Date (booking.date);
+
+          return(
+
           <li key={booking._id}>
             {booking.service} on {new Date(booking.date).toLocaleDateString()} at{" "}
             {booking.time} - {booking.status}
             <button onClick={() => handleDelete(booking._id)}>Delete</button>
           </li>
-        ))}
+        );
+})}
       </ul>
     </div>
-  );
-};
+      );
+    };
 
 export default BookingForm;
