@@ -41,9 +41,7 @@ const Contact =()=>{
     } catch (err) {
       setStatus({ ok: false, message: "Failed to send message. Please try again." });
     }
-
-        };
-    
+};
 
 
     return(
@@ -90,7 +88,7 @@ const Contact =()=>{
         placeholder="Your Message"
         required
 
-        />
+        ></textarea>
 
         <button type="submit">Submit</button>
         
