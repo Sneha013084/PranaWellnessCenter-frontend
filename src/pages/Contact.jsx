@@ -1,5 +1,6 @@
 
 import React, { useState} from "react";
+import { submitContact } from "../services/contactService";
 import "./Contact.css";
 
 
@@ -24,22 +25,25 @@ const Contact =()=>{
 
     //to prevent the refrshing of the page on sumission
 
-    const handleSubmit=(e)=>{
+    const handleSubmit=async(e)=>{
         e.preventDefault();
 
         ///sending form to the database
         // after submission the form should be empty
 
-        setStatus("SUCCESS");
+        
+    try {
+      const res = await submitContact(form); //  call backend API
+      setStatus({ ok: true, message: "Message sent successfully!" });
 
-        //resetting the form
+      // reset form
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } catch (err) {
+      setStatus({ ok: false, message: "Failed to send message. Please try again." });
+    }
 
-        setForm({
-            name:"",
-            email:"",
-            phone:"",
-            message:"",
-        });
+    
+        };
     }
 
 
