@@ -42,9 +42,8 @@ const Contact =()=>{
       setStatus({ ok: false, message: "Failed to send message. Please try again." });
     }
 
-    
         };
-    }
+    
 
 
     return(
@@ -100,6 +99,7 @@ const Contact =()=>{
         </div>
 
     );
-};
+}
+
 
 export default Contact;
