@@ -1,6 +1,8 @@
 
 import React,{useState} from "react";
 import "./Login.css";
+import { loginUser } from "../services/userService";
+import axios from "axios";
 
 const Login = () => {
   const [form, setForm] = useState({email:"", password:""});
@@ -9,7 +11,7 @@ const Login = () => {
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value});
   }
-  const handleSumit =async(e)=>{
+  const handleSubmit =async(e)=>{
     e.preventDefault();
 
     // for connection to the backend
