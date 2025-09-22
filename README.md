@@ -1,12 +1,95 @@
-# React + Vite
+## Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Wellness center booking website, built using React, javascript and Vanilla css. It provides the user interface for interacting with the backend API, including user registration, login, profile management, and booking services.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+User authentication (registration, login, logout)
 
-## Expanding the ESLint configuration
+Profile viewing and editing
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Booking creation, viewing, and status updates
+
+Responsive design for desktop and mobile
+
+Error handling and form validati
+
+## Technologies Used
+
+Frontend Framework: React.js
+
+State Management: Context API 
+
+Styling:CSS 
+
+Routing: React Router DOM
+
+API Calls: Axios / Fetch API
+
+Other Tools: Prettier
+
+## Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/frontend.git
+
+
+## Navigate to the frontend folder:
+
+cd frontend
+
+
+## Install dependencies:
+
+npm install
+
+
+## Create a .env file in the root 
+
+REACT_APP_API_URL=http://localhost:5000/api
+
+
+## Start the development server:
+
+npm start
+
+
+The app should now be running at http://localhost:5173
+
+## Folder Structure
+
+frontend/
+├─ public/                 # Static files
+├─ src/
+│  ├─ components/          # React components (UI elements)
+│  ├─ pages/               # Pages (Login, Register, Profile, Booking)
+│  ├─ context/             # Context API providers
+│  ├─ services/            # API service calls
+│  ├─ App.js / App.tsx     # Main App component
+│  └─ index.js / index.tsx # Entry point
+├─ package.json
+└─ README.md
+
+## Connecting to Backend
+
+Ensure that backend server is running at the URL specified in .env file. API calls from the frontend will interact with endpoints such as:
+
+POST /api/users/register – Register new users
+
+POST /api/users/login – Login users
+
+GET /api/users/profile – Get user profile
+
+POST /api/bookings – Create a new booking
+
+GET /api/bookings – Get user bookings
+
+## Deployment
+
+To build the frontend for production:
+
+## npm run build
+
+
+The build folder can then be served by any backend Express server or deployed on platforms like Render, Vercel, or Netlify.
