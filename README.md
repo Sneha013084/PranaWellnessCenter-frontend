@@ -32,7 +32,7 @@ Other Tools: Prettier
 
 Clone the repository:
 
-git clone https://github.com/yourusername/frontend.git
+git clone https://github.com/Sneha013084/PranaWellnessCenter-frontend
 
 
 ## Navigate to the frontend folder:
